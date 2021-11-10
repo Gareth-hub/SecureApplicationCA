@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.staff.MainController">
+    <children>
+        <VBox layoutX="32.0" layoutY="88.0" prefHeight="214.0" prefWidth="76.0" spacing="15.0">
+            <children>
+                <Label text="ID">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Name">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Email">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label text="Age">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Label prefHeight="20.0" prefWidth="63.0" text="Salary">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+            </children>
+        </VBox>
+        <VBox layoutX="108.0" layoutY="88.0" prefHeight="172.0" prefWidth="192.0" spacing="10.0">
+            <children>
+                <TextField fx:id="tfId" />
+                <TextField fx:id="tfName" />
+                <TextField fx:id="tfEmail" layoutX="10.0" layoutY="10.0" />
+                <TextField fx:id="tfAge" layoutX="10.0" layoutY="35.0" />
+                <TextField fx:id="tfSalary" layoutX="10.0" layoutY="85.0" />
+            </children>
+        </VBox>
+        <TableView fx:id="tvStaff" layoutX="40.0" layoutY="300.0" prefHeight="275.0" prefWidth="520.0">
+            <columns>
+                <TableColumn fx:id="colId" prefWidth="58.0" text="ID" />
+                <TableColumn fx:id="colName" prefWidth="133.0" text="Name" />
+                <TableColumn fx:id="colEmail" prefWidth="119.0" text="Email" />
+                <TableColumn fx:id="colAge" prefWidth="88.0" text="Age" />
+                <TableColumn fx:id="colSalary" prefWidth="119.33331298828125" text="Salary" />
+            </columns>
+        </TableView>
+        <Button fx:id="btnInsert" layoutX="332.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnInsertOnAction" prefHeight="25.0" prefWidth="85.0" text="Insert" />
+        <Button fx:id="btnUpdate" layoutX="428.0" layoutY="182.0" mnemonicParsing="false" onAction="#btnUpdateOnAction" prefHeight="25.0" prefWidth="85.0" text="Update" />
+        <Button fx:id="btnDelete" layoutX="332.0" layoutY="225.0" mnemonicParsing="false" onAction="#btnDeleteOnAction" prefHeight="25.0" prefWidth="85.0" text="Delete" />
+      <Button fx:id="closeButton" layoutX="428.0" layoutY="225.0" mnemonicParsing="false" onAction="#closeButtonOnAction" prefHeight="25.0" prefWidth="85.0" text="Close" />
+      <Label fx:id="errorLabel" layoutX="45.0" layoutY="271.0" prefHeight="17.0" prefWidth="509.0" />
+      <Label layoutX="347.0" layoutY="97.0" prefHeight="17.0" prefWidth="160.0" text="Clearance Code" textFill="#1329b5">
+         <font>
+            <Font name="Verdana Bold" size="12.0" />
+         </font>
+      </Label>
+      <TextField fx:id="codeTextField" layoutX="343.0" layoutY="123.0" promptText="Clearance Code" />
+      <AnchorPane layoutX="-1.0" prefHeight="75.0" prefWidth="606.0" style="-fx-background-color: purple;">
+         <children>
+            <Label alignment="CENTER" layoutX="164.0" layoutY="29.0" prefHeight="17.0" prefWidth="259.0" text="Staff System" textFill="#ede4e4">
+               <font>
+                  <Font name="Verdana Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+    </children>
+</AnchorPane>
